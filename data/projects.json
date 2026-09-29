@@ -1,0 +1,164 @@
+[
+  {
+    "id": "tourism-app",
+    "title": "Tourism & Travel Guide Application",
+    "category": "mobile",
+    "badge": "Flutter & Google Maps",
+    "description": "Recent project: Comprehensive tourism and travel exploration mobile app featuring interactive destination discovery, curated itineraries, offline travel guides, real-time GPS navigation, and tour package booking.",
+    "highlights": [
+      "Interactive Google Maps integration with route navigation and nearby attraction discovery",
+      "Offline caching of travel itineraries and destination guides for remote travel destinations",
+      "Seamless tour package booking with secure integrated payment gateway",
+      "User reviews, photo sharing, and personalized destination recommendations"
+    ],
+    "tags": ["Flutter", "Dart", "Google Maps", "Firebase", "Payment Gateway", "REST API"],
+    "icon": "🏖️",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "tourism-registration",
+    "title": "Tourism & Visitor Registration Portal",
+    "category": "backend",
+    "badge": "Mobile & Web Registration",
+    "description": "Recent project: End-to-end tourist and visitor registration management system featuring OTP phone verification, digital ID upload, instant QR code pass generation, and real-time check-in tracking.",
+    "highlights": [
+      "Instant digital pass generation with dynamic QR codes for rapid checkpoint scanning",
+      "Secure OTP phone authentication and visitor document verification workflow",
+      "Real-time visitor count analytics and check-in/check-out tracking dashboard",
+      "Automated SMS/Email confirmation with downloadable PDF pass"
+    ],
+    "tags": ["Flutter", "Python", "Django", "QR Code", "OTP Auth", "REST API"],
+    "icon": "🎫",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "matchmaking-app",
+    "title": "Matchmaking Mobile App",
+    "category": "mobile",
+    "badge": "Flutter & Firebase",
+    "description": "Full-featured matchmaking mobile application with real-time encrypted chat, secure OTP phone authentication, Firebase backend integration, and custom REST API services for high-concurrency matchmaking algorithms.",
+    "highlights": [
+      "Real-time instant chat powered by Firebase Firestore & WebSockets",
+      "Secure OTP verification and phone authentication workflow",
+      "Custom RESTful APIs for profile matching and location discovery",
+      "Scalable app architecture with Riverpod state management"
+    ],
+    "tags": ["Flutter", "Firebase", "REST API", "OTP Auth", "Dart"],
+    "icon": "💬",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "video-streaming-app",
+    "title": "Video Streaming Application",
+    "category": "mobile",
+    "badge": "Mobile Media",
+    "description": "Cross-platform video streaming mobile app built with Flutter and Firebase, featuring media player integration, automated push notifications via FCM, and user account management with seamless offline caching.",
+    "highlights": [
+      "High-performance video streaming with HLS/DASH playback",
+      "Push notifications for new content alerts using Firebase Cloud Messaging (FCM)",
+      "Secure user authentication and watch history synchronization",
+      "Adaptive bitrate streaming for low-bandwidth networks"
+    ],
+    "tags": ["Flutter", "Firebase", "FCM", "Auth", "Video Streaming"],
+    "icon": "🎬",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "service-booking-app",
+    "title": "Service Booking Application",
+    "category": "mobile",
+    "badge": "On-Demand Services",
+    "description": "On-demand service booking system featuring live service status tracking, integrated payment gateway, WebSocket-powered real-time updates, and automated push notifications for technicians and customers.",
+    "highlights": [
+      "Integrated secure payment gateways (Razorpay / Stripe)",
+      "Real-time technician location tracking and status updates via WebSockets",
+      "Automated push notifications for booking confirmations and dispatch",
+      "Comprehensive customer reviews and appointment scheduling engine"
+    ],
+    "tags": ["Flutter", "Payment Gateway", "Firebase", "WebSocket", "Google Maps"],
+    "icon": "📅",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "pet-adoption-ai",
+    "title": "Pet Adoption & E-Commerce Platform",
+    "category": "ai",
+    "badge": "AI-Powered Full-Stack",
+    "description": "Full-stack pet adoption platform with an AI-powered breed detection and auto-fill engine using Hugging Face Mixtral-8x7B model, accompanied by a nearby veterinary clinic finder and pet accessories e-commerce store.",
+    "highlights": [
+      "AI Breed Identification: Hugging Face Mixtral-8x7B model integration for automated pet profile creation",
+      "Full-stack Django & Python backend with SQLite / PostgreSQL",
+      "Geolocation-based veterinary clinic finder using Google Maps",
+      "E-commerce storefront for pet essentials and accessories"
+    ],
+    "tags": ["Django", "Python", "Hugging Face", "Mixtral-8x7B", "SQLite", "Bootstrap 5"],
+    "icon": "🐾",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "student-management-system",
+    "title": "Student Management System",
+    "category": "backend",
+    "badge": "Full-Stack Django",
+    "description": "Comprehensive academic management portal featuring role-based access control (Admin, Faculty, Student), attendance tracking, gradebook computation, and complete MySQL database integration with responsive interface.",
+    "highlights": [
+      "Role-Based Access Control (RBAC) with granular permissions",
+      "Automated attendance analytics and grade report generator",
+      "Optimized MySQL relational database schema and queries",
+      "Clean, modern responsive UI built with HTML5, CSS3, and JavaScript"
+    ],
+    "tags": ["Django", "Python", "MySQL", "HTML5/CSS3", "JavaScript"],
+    "icon": "🎓",
+    "featured": false,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "smartycard-nfc",
+    "title": "SmartyCard — NFC Digital Business Card",
+    "category": "mobile",
+    "badge": "NFC & Cloud",
+    "description": "Next-generation cross-platform NFC digital business card application with dynamic QR code sharing, real-time profile view analytics, Supabase backend integration, and premium profile customization.",
+    "highlights": [
+      "NFC chip read/write integration for one-tap contact exchange",
+      "Real-time visitor analytics and profile interaction metrics",
+      "Supabase & Firebase hybrid backend with instant cloud sync",
+      "Custom card theme generator with high-resolution QR rendering"
+    ],
+    "tags": ["Flutter", "Dart", "Firebase", "Supabase", "NFC", "QR Engine"],
+    "icon": "💳",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  },
+  {
+    "id": "job-portal-platform",
+    "title": "Job Portal & Recruitment Platform",
+    "category": "backend",
+    "badge": "Full-Stack Portal",
+    "description": "End-to-end Job Portal web application connecting job seekers and employers. Features candidate resume upload and parsing, advanced job search filters, recruiter dashboard, job posting management, and real-time application status tracking.",
+    "highlights": [
+      "Comprehensive job seeker portal with automated profile creation and resume/PDF attachment",
+      "Recruiter job posting management system with applicant tracking and status updates",
+      "Dynamic search and filtering by category, salary, job type, and location",
+      "Responsive, clean UI design built for seamless desktop and mobile recruitment workflows"
+    ],
+    "tags": ["Python", "Django", "JavaScript", "HTML5/CSS3", "REST API", "PostgreSQL"],
+    "icon": "💼",
+    "featured": true,
+    "github": "https://github.com/teena-tech",
+    "live": "#"
+  }
+]

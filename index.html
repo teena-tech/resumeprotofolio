@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Teena Davis - Senior Mobile Application Developer with 5+ years experience in Flutter, Android, iOS, Python, and AI integration.">
+  <meta name="keywords" content="Teena Davis, Mobile Developer, Flutter Developer, Android Developer, iOS Developer, Python Developer, Django, Hugging Face, Portfolio">
+  <meta name="author" content="Teena Davis">
+  <meta property="og:title" content="Teena Davis | Senior Mobile Application Developer">
+  <meta property="og:description" content="5+ Years building high-performance Flutter, Android, iOS, and AI-integrated mobile solutions.">
+  <meta property="og:type" content="website">
+  
+  <title>Teena Davis | Mobile Application Developer</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="static/images/profile.jpeg">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  
+  <!-- Canvas for Floating Bloody Red Embers -->
+  <canvas id="ember-canvas"></canvas>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       ============================================================ -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" id="brand-logo">
+        <span class="logo-badge">TD</span>
+        <span>Teena Davis</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Highlights</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="static/Teena_Davis_Resume.pdf" class="btn btn-primary btn-sm" id="nav-resume-btn" download="Teena_Davis_Resume.pdf" target="_blank">
+          <span>Resume 📄</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-container">
+            <div class="hero-badge">
+              <span class="status-ping"></span>
+              <span>Available for Mobile & Cross-Platform Roles</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Teena Davis</span>
+          </h1>
+
+          <div class="hero-subtitle-container">
+            <span>Specialized in</span>
+            <span class="typewriter-text" id="typewriter">Mobile Application Developer</span>
+          </div>
+
+          <p class="hero-description">
+            Results-driven Mobile Application Developer with <strong>5+ years of experience</strong> crafting scalable, high-performance Android, iOS, and cross-platform applications using <strong>Flutter</strong>. Strong expertise in REST API integration, Firebase services, scalable app architecture, and backend engineering with <strong>Python & Django</strong>.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+              <span>Explore My Work</span>
+              <span>↓</span>
+            </a>
+            <a href="static/Teena_Davis_Resume.pdf" class="btn btn-secondary" id="hero-download-btn" download="Teena_Davis_Resume.pdf" target="_blank">
+              <span>Download Resume</span>
+              <span>📥</span>
+            </a>
+            <a href="#contact" class="btn btn-outline" id="hero-contact-btn">
+              <span>Let's Talk</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">5<span>+</span></div>
+              <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15<span>+</span></div>
+              <div class="stat-label">Production Apps</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">95<span>%</span></div>
+              <div class="stat-label">Flutter & Dart Mastery</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-halo"></div>
+          <div class="hero-card-frame">
+            <img src="static/images/profile.jpeg" alt="Teena Davis - Mobile Application Developer" class="hero-image">
+            
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-top">
+              <span class="badge-icon">📱</span>
+              <div>
+                <div class="badge-text-primary">Flutter & Dart</div>
+                <div class="badge-text-sub">Mobile Specialist</div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <span class="badge-icon">🍎</span>
+              <div>
+                <div class="badge-text-primary">Android & iOS</div>
+                <div class="badge-text-sub">Cross-Platform & Native</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><span class="dot"></span> Who I Am</span>
+        <h2 class="section-title">Engineering Mobile & Cloud Systems With <span class="text-blood">Passion</span></h2>
+        <p class="section-subtitle">A blend of robust software architecture, clean UI/UX intuition, and intelligent automation.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <p>
+            I am a Mobile Application Developer based in Thrissur, Kerala. Over the past 5+ years, I have engineered and deployed mission-critical mobile solutions spanning e-commerce, real-time matchmaking, live video streaming, and IoT/NFC business applications.
+          </p>
+          <p>
+            My core strength lies in combining state-of-the-art Flutter and native mobile frontends with dependable backend integrations using Python, Django, Firebase, and AWS. I also incorporate cutting-edge AI technologies, such as Hugging Face Mixtral LLMs, to deliver intelligent user experiences.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">⚡</div>
+              <div class="highlight-text">
+                <strong>High Performance</strong>
+                <span>60fps smooth animations & reactive state</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🔒</div>
+              <div class="highlight-text">
+                <strong>Secure Architecture</strong>
+                <span>OTP verification, JWT & OAuth</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">💬</div>
+              <div class="highlight-text">
+                <strong>Real-Time Systems</strong>
+                <span>WebSockets & Firebase Firestore sync</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🚀</div>
+              <div class="highlight-text">
+                <strong>CI/CD & Releases</strong>
+                <span>Continuous delivery to Play Store & App Store</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-cards-grid">
+          <div class="info-box">
+            <div class="info-box-icon">📍</div>
+            <div class="info-box-title">Location</div>
+            <div class="info-box-desc">Thrissur, Kerala, India (Open to Remote & Hybrid worldwide)</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-box-icon">🎓</div>
+            <div class="info-box-title">Education</div>
+            <div class="info-box-desc">MCA (Master of Computer Applications) & BCA from MG University</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-box-icon">💼</div>
+            <div class="info-box-title">Current Role</div>
+            <div class="info-box-desc">Senior Mobile App Developer @ Antz Media Solutions, Kochi</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-box-icon">🌐</div>
+            <div class="info-box-title">Languages</div>
+            <div class="info-box-desc">English (Fluent) & Malayalam (Native)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS MATRIX (Exact Match to Resume)
+       ============================================================ -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><span class="dot"></span> Technical Stacks</span>
+        <h2 class="section-title">Skills & <span class="text-blood">Technologies</span></h2>
+        <p class="section-subtitle">Proven proficiencies refined through production releases and enterprise mobile projects.</p>
+      </div>
+
+      <div class="skills-container">
+        <!-- Card 1: Mobile Development -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">📱</div>
+            <h3 class="category-title">Mobile Development</h3>
+          </div>
+
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>Flutter / Dart</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="95%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>Android / Java / iOS</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>State Management & Architecture</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tools-tags-container">
+            <span class="tool-tag">Flutter</span>
+            <span class="tool-tag">Dart</span>
+            <span class="tool-tag">Android Studio</span>
+            <span class="tool-tag">Java</span>
+            <span class="tool-tag">iOS</span>
+            <span class="tool-tag">NFC Integration</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Backend & AI -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">🧠</div>
+            <h3 class="category-title">Backend & AI Engineering</h3>
+          </div>
+
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>REST APIs / JSON</span>
+                <span class="skill-percentage">92%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="92%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>Django Framework & Python</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="88%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>AI & Hugging Face (Mixtral-8x7B)</span>
+                <span class="skill-percentage">78%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="78%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tools-tags-container">
+            <span class="tool-tag">Django Framework</span>
+            <span class="tool-tag">Python</span>
+            <span class="tool-tag">Node.js</span>
+            <span class="tool-tag">Hugging Face</span>
+            <span class="tool-tag">SQLite</span>
+            <span class="tool-tag">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Cloud, Realtime & DevOps -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">☁️</div>
+            <h3 class="category-title">Cloud, Realtime & DevOps</h3>
+          </div>
+
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>Firebase (Firestore, FCM, Auth)</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>GitHub & Git / CI-CD Pipelines</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span>AWS & Google Cloud</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-fill" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tools-tags-container">
+            <span class="tool-tag">GitHub</span>
+            <span class="tool-tag">Git</span>
+            <span class="tool-tag">AWS (EC2, S3)</span>
+            <span class="tool-tag">Google Cloud</span>
+            <span class="tool-tag">WebSockets</span>
+            <span class="tool-tag">Google Maps</span>
+            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">Antigravity AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE & EDUCATION TIMELINE
+       ============================================================ -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><span class="dot"></span> Career Path</span>
+        <h2 class="section-title">Experience & <span class="text-blood">Education</span></h2>
+        <p class="section-subtitle">Track record of delivering scalable software across fast-paced technology companies.</p>
+      </div>
+
+      <div class="timeline-tabs">
+        <button class="timeline-tab-btn active" data-target="experience">Professional Experience</button>
+        <button class="timeline-tab-btn" data-target="education">Education & Degrees</button>
+      </div>
+
+      <!-- Professional Experience Timeline -->
+      <div class="timeline-container" id="experience-timeline">
+        <!-- Milestone 1: Antz Media Solutions -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Senior Mobile App Developer</h3>
+              <span class="timeline-period">2025 – Present</span>
+            </div>
+            <div class="timeline-company">Antz Media Solutions <span>· Kochi</span></div>
+            <ul class="timeline-bullets">
+              <li>Architecting and spearheading high-performance Flutter and iOS mobile applications for cross-platform deployments.</li>
+              <li>Developing backend modules and microservices using Python & Django.</li>
+              <li>Integrating complex third-party RESTful APIs and optimizing app runtime performance.</li>
+              <li>Managing Google Play Store and Apple App Store releases with CI/CD deployment pipelines.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Milestone 2: Sociable Tech Ventures -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Mobile App Developer</h3>
+              <span class="timeline-period">2024 – 2025</span>
+            </div>
+            <div class="timeline-company">Sociable Tech Ventures <span>· Kochi</span></div>
+            <ul class="timeline-bullets">
+              <li>Built key features including OTP autofill, real-time chat systems, and live data synchronization.</li>
+              <li>Integrated Firebase Analytics and Facebook Analytics for user behavior tracking and conversion funnels.</li>
+              <li>Managed Play Store releases and maintained CI/CD pipelines for continuous delivery.</li>
+              <li>Implemented WebSocket-based real-time communication for instant messaging features.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Milestone 3: Vyrox Technologies -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Software Developer</h3>
+              <span class="timeline-period">Sep 2022 – Mar 2024</span>
+            </div>
+            <div class="timeline-company">Vyrox Technologies <span>· Thrissur</span></div>
+            <ul class="timeline-bullets">
+              <li>Developed Flutter apps for e-commerce and high-throughput video streaming platforms.</li>
+              <li>Integrated payment gateways, Firebase services, and Google Maps API for real-time tracking.</li>
+              <li>Improved application performance through systematic debugging and UI optimization.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Milestone 4: Wahy Lab Solutions -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Junior Mobile App Developer</h3>
+              <span class="timeline-period">Jun 2019 – Aug 2022</span>
+            </div>
+            <div class="timeline-company">Wahy Lab Solutions <span>· Kochi</span></div>
+            <ul class="timeline-bullets">
+              <li>Developed Android applications using Java and Android Studio.</li>
+              <li>Built UI components and implemented core application logic and navigation.</li>
+              <li>Conducted thorough testing and bug fixing to ensure production quality.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Timeline -->
+      <div class="timeline-container" id="education-timeline" style="display: none;">
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Master of Computer Applications (MCA)</h3>
+              <span class="timeline-period">2017 – 2019</span>
+            </div>
+            <div class="timeline-company">Mahatma Gandhi University <span>· Kerala</span></div>
+            <p style="color: var(--text-sub); font-size: 0.95rem;">
+              Advanced postgraduate program focused on Software Engineering, Database Management Systems, Algorithm Design, and Distributed Systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <h3 class="timeline-role">Bachelor of Computer Applications (BCA)</h3>
+              <span class="timeline-period">2014 – 2017</span>
+            </div>
+            <div class="timeline-company">Mahatma Gandhi University <span>· Kerala</span></div>
+            <p style="color: var(--text-sub); font-size: 0.95rem;">
+              Undergraduate foundation covering Object-Oriented Programming (Java & C++), Data Structures, Computer Networks, and Web Technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PROJECTS SECTION (From Resume)
+       ============================================================ -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><span class="dot"></span> Portfolio Showcase</span>
+        <h2 class="section-title">Featured <span class="text-blood">Projects</span></h2>
+        <p class="section-subtitle">Real-world applications delivering value to thousands of users across mobile platforms.</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="mobile">Mobile & Flutter</button>
+        <button class="filter-btn" data-filter="ai">AI & Full-Stack</button>
+        <button class="filter-btn" data-filter="backend">Backend & Web</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Recent Project: Tourism & Travel Guide -->
+        <div class="project-card" data-category="mobile" data-id="tourism-app">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🏖️</div>
+              <span class="project-badge">Flutter & Google Maps</span>
+            </div>
+            <h3 class="project-title">Tourism & Travel Guide App</h3>
+            <p class="project-desc">
+              Comprehensive tourism and travel exploration mobile app featuring interactive destination discovery, curated itineraries, offline travel guides, real-time GPS navigation, and tour booking.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Flutter</span>
+              <span class="tag-pill">Google Maps</span>
+              <span class="tag-pill">Firebase</span>
+              <span class="tag-pill">Payment Gateway</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Project: Tourism & Visitor Registration Portal -->
+        <div class="project-card" data-category="backend" data-id="tourism-registration">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🎫</div>
+              <span class="project-badge">Registration & QR Pass</span>
+            </div>
+            <h3 class="project-title">Tourism & Visitor Registration</h3>
+            <p class="project-desc">
+              End-to-end tourist and visitor registration management system featuring OTP phone verification, digital ID upload, instant QR code pass generation, and real-time check-in tracking.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Flutter</span>
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">Django</span>
+              <span class="tag-pill">QR Code</span>
+              <span class="tag-pill">OTP Auth</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 1: Matchmaking Mobile App -->
+        <div class="project-card" data-category="mobile" data-id="matchmaking-app">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">💬</div>
+              <span class="project-badge">Flutter & Firebase</span>
+            </div>
+            <h3 class="project-title">Matchmaking Mobile App</h3>
+            <p class="project-desc">
+              Full-featured matchmaking mobile application with real-time encrypted chat, secure OTP phone authentication, Firebase integration, and REST API backend.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Flutter</span>
+              <span class="tag-pill">Firebase</span>
+              <span class="tag-pill">REST API</span>
+              <span class="tag-pill">OTP Auth</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Video Streaming Application -->
+        <div class="project-card" data-category="mobile" data-id="video-streaming-app">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🎬</div>
+              <span class="project-badge">Mobile Media</span>
+            </div>
+            <h3 class="project-title">Video Streaming Application</h3>
+            <p class="project-desc">
+              Cross-platform streaming app built with Flutter and Firebase backend, featuring authentication, push notifications via FCM, and smooth media playback.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Flutter</span>
+              <span class="tag-pill">Firebase</span>
+              <span class="tag-pill">FCM</span>
+              <span class="tag-pill">Auth</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Service Booking Application -->
+        <div class="project-card" data-category="mobile" data-id="service-booking-app">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">📅</div>
+              <span class="project-badge">On-Demand Services</span>
+            </div>
+            <h3 class="project-title">Service Booking Application</h3>
+            <p class="project-desc">
+              Booking system with integrated payment gateway, real-time status updates via WebSockets, and push notifications for service tracking.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Flutter</span>
+              <span class="tag-pill">Payment Gateway</span>
+              <span class="tag-pill">Firebase</span>
+              <span class="tag-pill">WebSocket</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Pet Adoption & E-Commerce -->
+        <div class="project-card" data-category="ai" data-id="pet-adoption-ai">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🐾</div>
+              <span class="project-badge">AI Integration</span>
+            </div>
+            <h3 class="project-title">Pet Adoption & E-Commerce</h3>
+            <p class="project-desc">
+              Full-stack pet adoption platform with AI-powered breed auto-fill using Hugging Face Mixtral-8x7B, vet clinic finder, and pet accessories store.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Django</span>
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">Hugging Face</span>
+              <span class="tag-pill">SQLite</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Student Management System -->
+        <div class="project-card" data-category="backend" data-id="student-management-system">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">🎓</div>
+              <span class="project-badge">Django Full-Stack</span>
+            </div>
+            <h3 class="project-title">Student Management System</h3>
+            <p class="project-desc">
+              Full-stack student management system with Django backend, HTML/CSS frontend, and complete MySQL relational database integration.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Django</span>
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">MySQL</span>
+              <span class="tag-pill">HTML/CSS</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: SmartyCard NFC -->
+        <div class="project-card" data-category="mobile" data-id="smartycard-nfc">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">💳</div>
+              <span class="project-badge">NFC & Supabase</span>
+            </div>
+            <h3 class="project-title">SmartyCard — Digital NFC Card</h3>
+            <p class="project-desc">
+              Cross-platform NFC-enabled digital business card app with QR code sharing, real-time profile analytics, and premium card customization.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Flutter</span>
+              <span class="tag-pill">Dart</span>
+              <span class="tag-pill">Supabase</span>
+              <span class="tag-pill">NFC</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Job Portal Web Application -->
+        <div class="project-card" data-category="backend" data-id="job-portal-platform">
+          <div>
+            <div class="project-header">
+              <div class="project-icon">💼</div>
+              <span class="project-badge">Full-Stack Web Portal</span>
+            </div>
+            <h3 class="project-title">Job Portal & Recruitment Platform</h3>
+            <p class="project-desc">
+              End-to-end recruitment platform connecting candidates and employers with resume parsing, job filtering, application tracking, and an interactive recruiter dashboard.
+            </p>
+          </div>
+          <div>
+            <div class="project-tags">
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">Django</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">REST API</span>
+              <span class="tag-pill">PostgreSQL</span>
+            </div>
+            <div class="project-footer">
+              <button class="project-btn-details">View Details →</button>
+              <div class="project-links">
+                <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Source Code">🐙</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATIONS & HIGHLIGHTS
+       ============================================================ -->
+  <section class="highlights-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><span class="dot"></span> Credentials & Milestones</span>
+        <h2 class="section-title">Certifications & <span class="text-blood">Highlights</span></h2>
+        <p class="section-subtitle">Continuous upskilling in Artificial Intelligence, Mobile Architecture, and Production Engineering.</p>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-badge-icon">📜</div>
+          <div class="highlight-content">
+            <h4>AI-Driven Python Programming</h4>
+            <p>Entri · Certified by NSDC (National Skill Development Corporation) & Illinois (USA).</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-badge-icon">⚡</div>
+          <div class="highlight-content">
+            <h4>Generative AI Tools Certification</h4>
+            <p>Out Skill · Applied prompt engineering, LLM workflow automation, and agentic integrations.</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-badge-icon">📱</div>
+          <div class="highlight-content">
+            <h4>5+ Years Mobile Development</h4>
+            <p>Delivered production apps across Android, iOS, and cross-platform using Flutter and Java.</p>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="highlight-badge-icon">🤖</div>
+          <div class="highlight-content">
+            <h4>Hugging Face Production LLM</h4>
+            <p>Implemented Mixtral-8x7B open-source model into live production mobile applications for automated inference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><span class="dot"></span> Get In Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="text-blood">Remarkable</span></h2>
+        <p class="section-subtitle">Have an exciting mobile opportunity, project collaboration, or inquiry? Send a message directly.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Cards -->
+        <div class="contact-info-panel">
+          <a href="mailto:teenatech8086@gmail.com" class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <div class="contact-card-text">
+              <span>Email Address</span>
+              <strong>teenatech8086@gmail.com</strong>
+            </div>
+          </a>
+
+          <a href="tel:+918086750402" class="contact-card">
+            <div class="contact-card-icon">📞</div>
+            <div class="contact-card-text">
+              <span>Phone Number</span>
+              <strong>+91-8086750402</strong>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/teena-davis" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon">🔗</div>
+            <div class="contact-card-text">
+              <span>LinkedIn Profile</span>
+              <strong>linkedin.com/in/teena-davis</strong>
+            </div>
+          </a>
+
+          <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon">🐙</div>
+            <div class="contact-card-text">
+              <span>GitHub Repositories</span>
+              <strong>github.com/teena-tech</strong>
+            </div>
+          </a>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div class="contact-card-text">
+              <span>Location</span>
+              <strong>Thrissur, Kerala, India</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name *</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Your Email *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="e.g. Mobile App Project Inquiry">
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message *</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Describe your project, timeline, or inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%;">
+              <span>Send Message ✉</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECT DETAILS MODAL
+       ============================================================ -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+      <div id="modal-body">
+        <!-- Dynamic content injected by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/teena-tech" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">🐙</a>
+        <a href="https://linkedin.com/in/teena-davis" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">🔗</a>
+        <a href="mailto:teenatech8086@gmail.com" class="social-btn" title="Email">✉️</a>
+        <a href="static/Teena_Davis_Resume.pdf" class="social-btn" title="Download Resume" download="Teena_Davis_Resume.pdf" target="_blank">📄</a>
+      </div>
+      <p class="footer-copyright">
+        &copy; 2026 <strong>Teena Davis</strong>. Mobile Application Developer Portfolio.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="static/js/main.js"></script>
+</body>
+</html>
