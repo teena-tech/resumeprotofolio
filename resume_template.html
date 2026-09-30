@@ -1,649 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Teena Davis - Senior Mobile Application Specialist</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    <meta charset="UTF-8">
+    <title>Teena Davis - Senior Mobile Application Specialist Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1e293b;
+            background-color: #ffffff;
+            line-height: 1.35;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .page {
+            width: 210mm;
+            height: 297mm;
+            padding: 12mm 14mm 10mm 14mm;
+            background: white;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+        .logo-box {
+            width: 46px;
+            height: 46px;
+            background: #1d4ed8;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-right: 14px;
+            letter-spacing: -0.5px;
+            flex-shrink: 0;
+        }
+        .header-main {
+            flex-grow: 1;
+        }
+        .name {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+        .subtitle {
+            font-size: 11px;
+            font-weight: 700;
+            color: #2563eb;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin: 2px 0 4px 0;
+        }
+        .contacts-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 14px;
+            font-size: 9px;
+            color: #475569;
+        }
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .contact-item a {
+            color: #475569;
+            text-decoration: none;
+        }
+        .contact-item a:hover {
+            color: #2563eb;
+        }
 
-  @page {
-    size: A4;
-    margin: 8mm 10mm 8mm 10mm;
-  }
+        /* 2-Column Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 190px 1fr;
+            gap: 14px;
+            flex-grow: 1;
+        }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
+        /* Section Headings */
+        .sec-title {
+            font-size: 10.5px;
+            font-weight: 800;
+            color: #1e40af;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            border-bottom: 1.5px solid #dbeafe;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
+            margin-top: 6px;
+        }
+        .sec-title:first-child {
+            margin-top: 0;
+        }
 
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #1a202c;
-    background: #ffffff;
-    font-size: 8.5pt;
-    line-height: 1.35;
-  }
+        /* Left Column Pills */
+        .skill-group {
+            margin-bottom: 7px;
+        }
+        .pills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3.5px;
+        }
+        .pill {
+            background-color: #eff6ff;
+            color: #1d4ed8;
+            font-size: 8px;
+            font-weight: 600;
+            padding: 2px 5.5px;
+            border-radius: 4px;
+            border: 1px solid #dbeafe;
+            line-height: 1.2;
+        }
 
-  /* Header */
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #0052cc;
-    margin-bottom: 10px;
-  }
+        /* Education & Certs */
+        .edu-box {
+            margin-bottom: 5px;
+        }
+        .edu-deg {
+            font-size: 8.5px;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.2;
+        }
+        .edu-sub {
+            font-size: 7.8px;
+            color: #64748b;
+        }
+        .edu-year {
+            font-size: 7.5px;
+            color: #2563eb;
+            font-weight: 600;
+        }
 
-  .logo-box {
-    width: 46px;
-    height: 46px;
-    background: #0052cc;
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 16pt;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    letter-spacing: -0.5px;
-  }
+        /* Bullet lists in left col */
+        .left-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .left-bullets li {
+            position: relative;
+            padding-left: 9px;
+            font-size: 8px;
+            color: #334155;
+            margin-bottom: 4px;
+            line-height: 1.25;
+        }
+        .left-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
 
-  .header-content {
-    flex: 1;
-  }
+        /* Right Column */
+        .summary-p {
+            font-size: 8.5px;
+            color: #334155;
+            line-height: 1.35;
+            text-align: justify;
+            margin-bottom: 6px;
+        }
 
-  .header-name {
-    font-size: 18pt;
-    font-weight: 800;
-    color: #0052cc;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-  }
+        /* Experience */
+        .exp-item {
+            margin-bottom: 6px;
+        }
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .exp-role {
+            font-size: 9.5px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .exp-period {
+            font-size: 8px;
+            font-weight: 600;
+            color: #2563eb;
+        }
+        .exp-company {
+            font-size: 8px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 2px;
+        }
+        .exp-bullets {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .exp-bullets li {
+            position: relative;
+            padding-left: 10px;
+            font-size: 8px;
+            color: #334155;
+            line-height: 1.3;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .exp-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: bold;
+        }
 
-  .header-title {
-    font-size: 9.5pt;
-    font-weight: 700;
-    color: #0052cc;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    margin-top: 2px;
-    margin-bottom: 4px;
-  }
-
-  .header-contacts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 7.8pt;
-    color: #4a5568;
-  }
-
-  .header-contacts a {
-    color: #0052cc;
-    text-decoration: none;
-    font-weight: 500;
-  }
-
-  .header-contacts span {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-  }
-
-  /* 2-Column Grid Layout */
-  .resume-grid {
-    display: grid;
-    grid-template-columns: 210px 1fr;
-    gap: 16px;
-  }
-
-  /* Section Styles */
-  .section-title {
-    font-size: 8.5pt;
-    font-weight: 800;
-    color: #0052cc;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    border-bottom: 1.5px solid #0052cc;
-    padding-bottom: 2px;
-    margin-top: 8px;
-    margin-bottom: 6px;
-  }
-
-  .left-col .section-title:first-child,
-  .right-col .section-title:first-child {
-    margin-top: 0;
-  }
-
-  /* Skills */
-  .skill-row {
-    margin-bottom: 4px;
-  }
-
-  .skill-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 7.5pt;
-    font-weight: 600;
-    color: #2d3748;
-    margin-bottom: 1.5px;
-  }
-
-  .skill-bar-bg {
-    height: 5px;
-    background: #e2e8f0;
-    border-radius: 3px;
-    overflow: hidden;
-  }
-
-  .skill-bar-fill {
-    height: 100%;
-    background: #0052cc;
-    border-radius: 3px;
-  }
-
-  /* Tools Tags */
-  .tools-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-top: 4px;
-  }
-
-  .tool-pill {
-    font-size: 7pt;
-    padding: 2px 5px;
-    background: #f1f5f9;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
-    color: #334155;
-    font-weight: 500;
-  }
-
-  /* Education & Details */
-  .edu-item {
-    margin-bottom: 6px;
-  }
-
-  .edu-degree {
-    font-size: 8pt;
-    font-weight: 700;
-    color: #1a202c;
-  }
-
-  .edu-school {
-    font-size: 7.5pt;
-    color: #4a5568;
-  }
-
-  .edu-year {
-    font-size: 7pt;
-    color: #718096;
-    font-weight: 600;
-  }
-
-  /* Professional Summary */
-  .summary-text {
-    font-size: 8pt;
-    color: #334155;
-    line-height: 1.4;
-    text-align: justify;
-    margin-bottom: 6px;
-  }
-
-  /* Experience */
-  .exp-item {
-    margin-bottom: 8px;
-  }
-
-  .exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  .exp-role {
-    font-size: 8.5pt;
-    font-weight: 700;
-    color: #0f172a;
-  }
-
-  .exp-period {
-    font-size: 7.5pt;
-    color: #64748b;
-    font-weight: 600;
-  }
-
-  .exp-company {
-    font-size: 7.8pt;
-    font-weight: 600;
-    color: #0052cc;
-    margin-bottom: 2px;
-  }
-
-  .exp-company span {
-    color: #64748b;
-    font-weight: 400;
-  }
-
-  .exp-bullets {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .exp-bullets li {
-    position: relative;
-    padding-left: 10px;
-    font-size: 7.6pt;
-    color: #334155;
-    line-height: 1.35;
-    margin-bottom: 1.5px;
-  }
-
-  .exp-bullets li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #0052cc;
-    font-weight: bold;
-  }
-
-  /* Key Projects Grid */
-  .projects-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    margin-top: 4px;
-  }
-
-  .project-card {
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    padding: 5px 7px;
-    background: #f8fafc;
-  }
-
-  .project-title-row {
-    font-size: 8pt;
-    font-weight: 700;
-    color: #0f172a;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-bottom: 2px;
-  }
-
-  .project-desc {
-    font-size: 7pt;
-    color: #475569;
-    line-height: 1.25;
-    margin-bottom: 3px;
-  }
-
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-  }
-
-  .project-tag {
-    font-size: 6.5pt;
-    color: #0052cc;
-    background: #eff6ff;
-    padding: 1px 4px;
-    border-radius: 3px;
-    font-weight: 600;
-  }
-
-  /* Highlights */
-  .highlights-wrap {
-    margin-top: 4px;
-  }
-
-  .hl-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 6px;
-    font-size: 7.5pt;
-    color: #334155;
-    margin-bottom: 3px;
-    line-height: 1.3;
-  }
-
-  .hl-icon {
-    font-size: 8.5pt;
-    line-height: 1;
-  }
-
-  .hl-text strong {
-    color: #0f172a;
-  }
-
-  /* Page break rules */
-  .page-break {
-    page-break-before: always;
-  }
-</style>
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 8px;
+            margin-top: 4px;
+        }
+        .proj-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            padding: 5px 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .proj-title {
+            font-size: 9px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .proj-desc {
+            font-size: 7.8px;
+            color: #475569;
+            line-height: 1.25;
+            margin-bottom: 4px;
+        }
+        .proj-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5px;
+        }
+        .proj-tag {
+            background-color: #eff6ff;
+            color: #1e40af;
+            font-size: 7px;
+            font-weight: 600;
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
+    <div class="page">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo-box">TD</div>
+            <div class="header-main">
+                <h1 class="name">Teena Davis</h1>
+                <div class="subtitle">SENIOR MOBILE APPLICATION SPECIALIST (5+ YEARS EXPERIENCE)</div>
+                <div class="contacts-grid">
+                    <div class="contact-item">✉️ <a href="mailto:teenatech8086@gmail.com">teenatech8086@gmail.com</a></div>
+                    <div class="contact-item">📞 +91-8086750402</div>
+                    <div class="contact-item">📍 Thrissur, Kerala</div>
+                    <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/teena-davis-0416b3259" target="_blank">linkedin.com/in/teena-davis-0416b3259</a></div>
+                    <div class="contact-item">🐙 <a href="https://github.com/teena-tech" target="_blank">github.com/teena-tech</a></div>
+                    <div class="contact-item">🌐 <a href="https://teena-tech.github.io/resumeprotofolio/" target="_blank">teena-tech.github.io/resumeprotofolio</a></div>
+                </div>
+            </div>
+        </header>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="header">
-    <div class="logo-box">TD</div>
-    <div class="header-content">
-      <h1 class="header-name">Teena Davis</h1>
-      <div class="header-title">Senior Mobile Application Developer & Specialist</div>
-      <div class="header-contacts">
-        <span>✉️ <a href="mailto:teenatech8086@gmail.com">teenatech8086@gmail.com</a></span>
-        <span>📞 +91-8086750402</span>
-        <span>📍 Thrissur, Kerala</span>
-        <span>🔗 <a href="https://www.linkedin.com/in/teena-davis-0416b3259" target="_blank">linkedin.com/in/teena-davis-0416b3259</a></span>
-        <span>🐙 <a href="https://github.com/teena-tech" target="_blank">github.com/teena-tech</a></span>
-        <span>🌐 <a href="https://teena-tech.github.io/resumeprotofolio/" target="_blank">teena-tech.github.io/resumeprotofolio</a></span>
-      </div>
+        <!-- 2-COLUMN MAIN -->
+        <div class="main-layout">
+            <!-- LEFT COLUMN -->
+            <div class="left-col">
+                <!-- CORE SKILLS -->
+                <div class="skill-group">
+                    <div class="sec-title">CORE SKILLS</div>
+                    <div class="pills-wrap">
+                        <span class="pill">Flutter</span>
+                        <span class="pill">Dart</span>
+                        <span class="pill">iOS (Swift / SwiftUI)</span>
+                        <span class="pill">Android (Java)</span>
+                        <span class="pill">Cross-Platform Dev</span>
+                        <span class="pill">State Management</span>
+                        <span class="pill">RESTful APIs / JSON</span>
+                        <span class="pill">WebSockets</span>
+                        <span class="pill">Google Maps Integration</span>
+                        <span class="pill">Payment Integration</span>
+                    </div>
+                </div>
+
+                <!-- BACKEND & CLOUD -->
+                <div class="skill-group">
+                    <div class="sec-title">BACKEND & CLOUD</div>
+                    <div class="pills-wrap">
+                        <span class="pill">Python</span>
+                        <span class="pill">Django</span>
+                        <span class="pill">Firebase (Auth, FCM)</span>
+                        <span class="pill">Firebase Analytics</span>
+                        <span class="pill">Facebook Analytics</span>
+                        <span class="pill">AWS (EC2, S3)</span>
+                        <span class="pill">Google Cloud</span>
+                        <span class="pill">MySQL / SQLite</span>
+                    </div>
+                </div>
+
+                <!-- DEVOPS & TOOLS -->
+                <div class="skill-group">
+                    <div class="sec-title">DEVOPS & TOOLS</div>
+                    <div class="pills-wrap">
+                        <span class="pill">Git / GitHub</span>
+                        <span class="pill">CI/CD Pipelines</span>
+                        <span class="pill">Play Store & App Store</span>
+                        <span class="pill">Android Studio</span>
+                        <span class="pill">Xcode</span>
+                        <span class="pill">Figma</span>
+                        <span class="pill">TestFlight</span>
+                        <span class="pill">Hugging Face (AI)</span>
+                    </div>
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="skill-group">
+                    <div class="sec-title">EDUCATION</div>
+                    <div class="edu-box">
+                        <div class="edu-deg">Master of Computer Applications (MCA)</div>
+                        <div class="edu-sub">Mahatma Gandhi University</div>
+                        <div class="edu-year">2017 – 2019</div>
+                    </div>
+                    <div class="edu-box">
+                        <div class="edu-deg">Bachelor of Computer Applications (BCA)</div>
+                        <div class="edu-sub">Mahatma Gandhi University</div>
+                        <div class="edu-year">2014 – 2017</div>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATIONS -->
+                <div class="skill-group">
+                    <div class="sec-title">CERTIFICATIONS</div>
+                    <div class="edu-box">
+                        <div class="edu-deg">AI-Driven Python Programming</div>
+                        <div class="edu-sub">Entri · NSDC & Illinois (USA)</div>
+                    </div>
+                    <div class="edu-box">
+                        <div class="edu-deg">Generative AI Tools Certification</div>
+                        <div class="edu-sub">OutSkill</div>
+                    </div>
+                </div>
+
+                <!-- KEY STRENGTHS -->
+                <div class="skill-group">
+                    <div class="sec-title">KEY STRENGTHS</div>
+                    <ul class="left-bullets">
+                        <li><strong>5+ Years Mobile Dev:</strong> Production Flutter, iOS, and Android applications.</li>
+                        <li><strong>AI Integration:</strong> Production Hugging Face LLM model workflows.</li>
+                        <li><strong>App Lifecycle:</strong> Complete App Store & Play Store CI/CD releases.</li>
+                    </ul>
+                </div>
+
+                <!-- LANGUAGES -->
+                <div class="skill-group">
+                    <div class="sec-title">LANGUAGES</div>
+                    <ul class="left-bullets">
+                        <li><strong>English:</strong> Fluent</li>
+                        <li><strong>Malayalam:</strong> Native</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-col">
+                <!-- PROFESSIONAL SUMMARY -->
+                <div class="sec-title">PROFESSIONAL SUMMARY</div>
+                <p class="summary-p">
+                    Results-driven Senior Mobile Application Specialist with 5+ years of experience architecting high-performance Android, iOS, and cross-platform apps using Flutter. Deep expertise in REST API integration, Firebase backend architecture, and WebSocket-driven real-time communication. Proven track record of delivering responsive 60fps animations, intuitive UI/UX, and cloud/AI integrations (Hugging Face, AWS, GCP) alongside automated CI/CD deployments to Google Play Store & Apple App Store.
+                </p>
+
+                <!-- PROFESSIONAL EXPERIENCE -->
+                <div class="sec-title">PROFESSIONAL EXPERIENCE</div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Senior Mobile App Developer</span>
+                        <span class="exp-period">2025 – Present</span>
+                    </div>
+                    <div class="exp-company">Antz Media Solutions · Kochi, Kerala</div>
+                    <ul class="exp-bullets">
+                        <li>Architecting and spearheading high-performance Flutter & iOS mobile apps with fluid 60fps animations.</li>
+                        <li>Designing native iOS modules using Swift conforming to Apple Human Interface Guidelines.</li>
+                        <li>Developing backend microservices and secure RESTful APIs using Python & Django.</li>
+                        <li>Managing end-to-end releases on Apple App Store & Google Play Store with automated CI/CD pipelines.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Mobile App Developer</span>
+                        <span class="exp-period">2024 – 2025</span>
+                    </div>
+                    <div class="exp-company">Sociable Tech Ventures · Kochi, Kerala</div>
+                    <ul class="exp-bullets">
+                        <li>Engineered interactive features including OTP autofill, real-time chat, and live state synchronization.</li>
+                        <li>Integrated Firebase Analytics and Facebook Analytics for deep user behavior tracking and conversion funnels.</li>
+                        <li>Implemented WebSocket-based real-time communication protocols for low-latency messaging.</li>
+                        <li>Maintained CI/CD pipelines and managed stable releases on the Google Play Store.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Software Developer</span>
+                        <span class="exp-period">Sep 2022 – Mar 2024</span>
+                    </div>
+                    <div class="exp-company">Vyrox Technologies · Thrissur, Kerala</div>
+                    <ul class="exp-bullets">
+                        <li>Developed production Flutter applications for e-commerce and high-throughput video streaming platforms.</li>
+                        <li>Integrated third-party payment gateways, Firebase Cloud Services, and Google Maps API for real-time tracking.</li>
+                        <li>Systematically improved app responsiveness and reduced memory leaks via profiling and UI rendering optimization.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Junior Mobile App Developer</span>
+                        <span class="exp-period">Jun 2019 – Aug 2022</span>
+                    </div>
+                    <div class="exp-company">Wahy Lab Solutions · Kochi, Kerala</div>
+                    <ul class="exp-bullets">
+                        <li>Developed native Android apps using Java and Android Studio, building core UI components and logic.</li>
+                        <li>Conducted unit testing, systematic debugging, and bug fixes to ensure robust production quality.</li>
+                    </ul>
+                </div>
+
+                <!-- KEY PROJECTS -->
+                <div class="sec-title">KEY PROJECTS</div>
+                <div class="projects-grid">
+                    <div class="proj-card">
+                        <div class="proj-title">✈️ Tourism & Travel Guide App</div>
+                        <div class="proj-desc">Destination discovery app with curated itineraries, offline guides, GPS navigation, and tour booking.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">Google Maps</span>
+                            <span class="proj-tag">Firebase</span>
+                            <span class="proj-tag">Payments</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-title">🎫 Tourism & Visitor Pass System</div>
+                        <div class="proj-desc">End-to-end tourist registration with OTP phone verification, digital ID, QR code passes, and check-in tracking.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">Django</span>
+                            <span class="proj-tag">Python</span>
+                            <span class="proj-tag">QR Code</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-title">💬 Real-Time Matchmaking & Chat</div>
+                        <div class="proj-desc">Matchmaking app with WebSocket instant messaging, OTP auth, Firebase integration, and Django REST backend.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">WebSockets</span>
+                            <span class="proj-tag">Firebase</span>
+                            <span class="proj-tag">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-title">🐾 AI Pet Adoption & E-Commerce</div>
+                        <div class="proj-desc">Full-stack platform with AI-powered breed auto-fill using Hugging Face Mixtral-8x7B, vet finder, and store.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Django</span>
+                            <span class="proj-tag">Hugging Face AI</span>
+                            <span class="proj-tag">SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-title">📹 Video Streaming Application</div>
+                        <div class="proj-desc">High-throughput streaming app with Flutter, media playback optimization, FCM push alerts, and Firebase auth.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">Firebase</span>
+                            <span class="proj-tag">FCM</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-title">💳 Digital Business Smartcard</div>
+                        <div class="proj-desc">Cross-platform NFC digital business card app with QR sharing, profile analytics, and instant card reading.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">NFC</span>
+                            <span class="proj-tag">Dart</span>
+                            <span class="proj-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
-
-  <div class="resume-grid">
-    <!-- ==================== LEFT COLUMN ==================== -->
-    <div class="left-col">
-      <div class="section-title">Technical Skills</div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>Flutter / Dart</span><span>95%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>Django Framework / Python</span><span>88%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>Android / Java</span><span>85%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>iOS / Swift & SwiftUI</span><span>85%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>GitHub & Git / CI-CD</span><span>90%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>Firebase (Auth, FCM, Firestore)</span><span>90%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>REST APIs / JSON</span><span>92%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span>AWS / Cloud</span><span>75%</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
-      </div>
-
-      <div class="section-title">Tools & Frameworks</div>
-      <div class="tools-wrap">
-        <span class="tool-pill">Django Framework</span>
-        <span class="tool-pill">GitHub</span>
-        <span class="tool-pill">Git</span>
-        <span class="tool-pill">Flutter</span>
-        <span class="tool-pill">Dart</span>
-        <span class="tool-pill">Android Studio</span>
-        <span class="tool-pill">Xcode</span>
-        <span class="tool-pill">Java</span>
-        <span class="tool-pill">Swift</span>
-        <span class="tool-pill">iOS</span>
-        <span class="tool-pill">Python</span>
-        <span class="tool-pill">Node.js</span>
-        <span class="tool-pill">Firebase</span>
-        <span class="tool-pill">SQLite</span>
-        <span class="tool-pill">MySQL</span>
-        <span class="tool-pill">AWS (EC2, S3)</span>
-        <span class="tool-pill">Google Cloud</span>
-        <span class="tool-pill">Figma</span>
-        <span class="tool-pill">WebSockets</span>
-        <span class="tool-pill">FCM</span>
-        <span class="tool-pill">Google Maps Integration</span>
-        <span class="tool-pill">Firebase Analytics</span>
-        <span class="tool-pill">Facebook Analytics</span>
-        <span class="tool-pill">Payment Integration (Razorpay/Stripe)</span>
-        <span class="tool-pill">Hugging Face</span>
-        <span class="tool-pill">TestFlight</span>
-      </div>
-
-      <div class="section-title">Education</div>
-      <div class="edu-item">
-        <div class="edu-degree">Master of Computer Applications (MCA)</div>
-        <div class="edu-school">Mahatma Gandhi University</div>
-        <div class="edu-year">2017 – 2019</div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
-        <div class="edu-school">Mahatma Gandhi University</div>
-        <div class="edu-year">2014 – 2017</div>
-      </div>
-
-      <div class="section-title">Certifications</div>
-      <div class="edu-item">
-        <div class="edu-degree">AI-Driven Python Programming</div>
-        <div class="edu-school">Entri · NSDC & Illinois (USA)</div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-degree">Generative AI Tools Certification</div>
-        <div class="edu-school">Out Skill</div>
-      </div>
-
-      <div class="section-title">Languages</div>
-      <div style="font-size: 7.5pt; color: #334155; line-height: 1.5;">
-        <div><strong>English</strong> — Fluent</div>
-        <div><strong>Malayalam</strong> — Native</div>
-      </div>
-
-      <div class="section-title">Internships</div>
-      <div class="edu-item">
-        <div class="edu-degree">Mobile App Development Internship</div>
-        <div class="edu-school">Flutter & Android Ecosystem</div>
-      </div>
-    </div>
-
-    <!-- ==================== RIGHT COLUMN ==================== -->
-    <div class="right-col">
-      <div class="section-title">Professional Summary</div>
-      <p class="summary-text">
-        Results-driven Mobile Application Developer with <strong>5+ years of experience</strong> building high-performance Android, iOS, and cross-platform applications using <strong>Flutter</strong>. Strong expertise in <strong>REST API integration, Firebase services, and scalable app architecture</strong>. Proven ability to deliver user-friendly, optimized applications with strong UI/UX and backend integration. Experienced with <strong>AI tooling including Hugging Face</strong> and cloud platforms (AWS, Google Cloud).
-      </p>
-
-      <div class="section-title">Professional Experience</div>
-
-      <!-- Experience 1: Antz Media Solutions -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-role">Senior Mobile App Developer</span>
-          <span class="exp-period">2025 – Present</span>
-        </div>
-        <div class="exp-company">Antz Media Solutions <span>· Kochi</span></div>
-        <ul class="exp-bullets">
-          <li>Architecting and spearheading high-performance Flutter and iOS mobile applications with fluid 60fps animations.</li>
-          <li>Designing and building native iOS modules using Swift and integrating with Apple Human Interface Guidelines.</li>
-          <li>Developing backend modules, microservices, and secure RESTful APIs using Python & Django.</li>
-          <li>Managing end-to-end releases on Apple App Store and Google Play Store with CI/CD deployment pipelines.</li>
-        </ul>
-      </div>
-
-      <!-- Experience 2: Sociable Tech Ventures -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-role">Mobile App Developer</span>
-          <span class="exp-period">2024 – 2025</span>
-        </div>
-        <div class="exp-company">Sociable Tech Ventures <span>· Kochi</span></div>
-        <ul class="exp-bullets">
-          <li>Built key features including OTP autofill, real-time chat systems, and live data updates.</li>
-          <li>Integrated Firebase Analytics and Facebook Analytics for user behavior tracking.</li>
-          <li>Managed Play Store releases and maintained CI/CD pipelines for continuous delivery.</li>
-          <li>Implemented WebSocket-based real-time communication for instant messaging features.</li>
-        </ul>
-      </div>
-
-      <!-- Experience 3: Vyrox Technologies -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-role">Software Developer</span>
-          <span class="exp-period">Sep 2022 – Mar 2024</span>
-        </div>
-        <div class="exp-company">Vyrox Technologies <span>· Thrissur</span></div>
-        <ul class="exp-bullets">
-          <li>Developed Flutter apps for e-commerce and high-throughput video streaming platforms.</li>
-          <li>Integrated payment gateways, Firebase services, and Google Maps API for live tracking.</li>
-          <li>Improved app performance through systematic debugging, profiling, and UI optimization.</li>
-        </ul>
-      </div>
-
-      <!-- Experience 4: Wahy Lab Solutions -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <span class="exp-role">Junior Mobile App Developer</span>
-          <span class="exp-period">Jun 2019 – Aug 2022</span>
-        </div>
-        <div class="exp-company">Wahy Lab Solutions <span>· Kochi</span></div>
-        <ul class="exp-bullets">
-          <li>Developed Android applications using Java and Android Studio.</li>
-          <li>Built UI components and implemented core application logic and navigation.</li>
-          <li>Conducted thorough testing and bug fixing to ensure production quality.</li>
-        </ul>
-      </div>
-
-      <div class="section-title">Key Projects (Including Recent Projects)</div>
-      <div class="projects-list">
-        <!-- Project 1: Tourism App (Recent) -->
-        <div class="project-card">
-          <div class="project-title-row">🏖️ Tourism & Travel Guide App</div>
-          <div class="project-desc">Comprehensive travel exploration app with interactive destination discovery, curated itineraries, offline travel guides, GPS navigation, and tour booking.</div>
-          <div class="project-tags">
-            <span class="project-tag">Flutter</span>
-            <span class="project-tag">Google Maps</span>
-            <span class="project-tag">Firebase</span>
-            <span class="project-tag">Payment</span>
-          </div>
-        </div>
-
-        <!-- Project 2: Tourism & Registration Portal (Recent) -->
-        <div class="project-card">
-          <div class="project-title-row">🎫 Tourism & Visitor Registration</div>
-          <div class="project-desc">End-to-end tourist registration system with OTP phone verification, digital ID upload, instant QR code pass generation, and real-time check-in tracking.</div>
-          <div class="project-tags">
-            <span class="project-tag">Flutter</span>
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Django</span>
-            <span class="project-tag">QR Code</span>
-          </div>
-        </div>
-
-        <!-- Project 3: Matchmaking App -->
-        <div class="project-card">
-          <div class="project-title-row">💬 Matchmaking Mobile App</div>
-          <div class="project-desc">Full-featured matchmaking app with real-time chat, OTP authentication, Firebase integration, and REST API backend.</div>
-          <div class="project-tags">
-            <span class="project-tag">Flutter</span>
-            <span class="project-tag">Firebase</span>
-            <span class="project-tag">REST API</span>
-            <span class="project-tag">OTP Auth</span>
-          </div>
-        </div>
-
-        <!-- Project 4: Video Streaming App -->
-        <div class="project-card">
-          <div class="project-title-row">🎬 Video Streaming Application</div>
-          <div class="project-desc">Streaming app built with Flutter and Firebase backend, featuring authentication, push notifications, and media playback.</div>
-          <div class="project-tags">
-            <span class="project-tag">Flutter</span>
-            <span class="project-tag">Firebase</span>
-            <span class="project-tag">FCM</span>
-            <span class="project-tag">Auth</span>
-          </div>
-        </div>
-
-        <!-- Project 5: Service Booking App -->
-        <div class="project-card">
-          <div class="project-title-row">📅 Service Booking Application</div>
-          <div class="project-desc">Booking system with integrated payment gateway, real-time status updates, and push notifications for service tracking.</div>
-          <div class="project-tags">
-            <span class="project-tag">Flutter</span>
-            <span class="project-tag">Payment Gateway</span>
-            <span class="project-tag">Firebase</span>
-            <span class="project-tag">WebSocket</span>
-          </div>
-        </div>
-
-        <!-- Project 6: Pet Adoption & AI -->
-        <div class="project-card">
-          <div class="project-title-row">🐾 Pet Adoption & E-Commerce</div>
-          <div class="project-desc">Full-stack pet adoption platform with AI-powered breed auto-fill (Hugging Face Mixtral), vet finder, and pet store.</div>
-          <div class="project-tags">
-            <span class="project-tag">Django</span>
-            <span class="project-tag">Python</span>
-            <span class="project-tag">SQLite</span>
-            <span class="project-tag">Hugging Face</span>
-          </div>
-        </div>
-
-        <!-- Project 7: Student Management System -->
-        <div class="project-card">
-          <div class="project-title-row">🎓 Student Management System</div>
-          <div class="project-desc">Full-stack academic management system with Django backend, HTML/CSS frontend, and complete database integration.</div>
-          <div class="project-tags">
-            <span class="project-tag">Django</span>
-            <span class="project-tag">Python</span>
-            <span class="project-tag">MySQL</span>
-            <span class="project-tag">HTML/CSS</span>
-          </div>
-        </div>
-
-        <!-- Project 8: SmartyCard NFC -->
-        <div class="project-card">
-          <div class="project-title-row">💳 Digital Business Smartcard</div>
-          <div class="project-desc">Cross-platform NFC digital business card app with QR code sharing, real-time profile analytics, and premium customization.</div>
-          <div class="project-tags">
-            <span class="project-tag">Flutter</span>
-            <span class="project-tag">Dart</span>
-            <span class="project-tag">Firebase</span>
-            <span class="project-tag">NFC</span>
-          </div>
-        </div>
-
-        <!-- Project 9: Job Portal Web Application -->
-        <div class="project-card">
-          <div class="project-title-row">💼 Job Portal & Recruitment Platform</div>
-          <div class="project-desc">Full-stack job portal web platform with candidate resume parsing, advanced search filters, recruiter dashboard, and status tracking.</div>
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Django</span>
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-title">Highlights</div>
-      <div class="highlights-wrap">
-        <div class="hl-item">
-          <span class="hl-icon">📱</span>
-          <div class="hl-text"><strong>5+ Years Mobile Development</strong> — Delivered production apps across Android, iOS, and cross-platform using Flutter, Swift, and Java.</div>
-        </div>
-        <div class="hl-item">
-          <span class="hl-icon">🤖</span>
-          <div class="hl-text"><strong>AI Integration</strong> — Implemented Hugging Face Mixtral-8x7B model for AI-powered auto-fill in a real-world production application.</div>
-        </div>
-        <div class="hl-item">
-          <span class="hl-icon">🚀</span>
-          <div class="hl-text"><strong>App Store & Play Store Releases</strong> — Successfully managed full app lifecycle from development to Play Store and Apple App Store deployment with CI/CD pipelines.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
