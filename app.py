@@ -99,6 +99,6 @@ def handle_contact():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 8080))
     print(f"🔥 Teena Davis Portfolio running at: http://127.0.0.1:{port}")
     app.run(host='0.0.0.0', port=port, debug=True)

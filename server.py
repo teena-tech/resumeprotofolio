@@ -10,7 +10,7 @@ import datetime
 import urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
-PORT = int(os.environ.get('PORT', 5000))
+PORT = int(os.environ.get('PORT', 8080))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
@@ -35,6 +35,9 @@ MIME_TYPES = {
 }
 
 class PortfolioHandler(BaseHTTPRequestHandler):
+    def do_HEAD(self):
+        self.do_GET()
+
     def do_GET(self):
         parsed_path = urllib.parse.urlparse(self.path)
         path = parsed_path.path

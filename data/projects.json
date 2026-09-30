@@ -127,7 +127,7 @@
   },
   {
     "id": "smartycard-nfc",
-    "title": "SmartyCard — NFC Digital Business Card",
+    "title": "Digital Business Smartcard",
     "category": "mobile",
     "badge": "NFC & Cloud",
     "description": "Next-generation cross-platform NFC digital business card application with dynamic QR code sharing, real-time profile view analytics, Supabase backend integration, and premium profile customization.",

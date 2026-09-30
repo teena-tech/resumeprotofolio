@@ -97,7 +97,7 @@ function initTypewriter() {
   if (!el) return;
 
   const phrases = [
-    'Mobile Application Developer',
+    'Senior Mobile Application Specialist',
     'Flutter & Dart Specialist',
     'Android & iOS App Developer',
     'Python & Django Backend Integrator',
